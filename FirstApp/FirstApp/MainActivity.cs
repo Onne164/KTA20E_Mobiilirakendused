@@ -12,7 +12,7 @@ namespace FirstApp
         TextView answerTextView;
         EditText firstNumberEditText;
         EditText secondNumberEditText;
-        Button addButton, subButton, mulButton, divButton;
+        Button addButton, subButton, mulButton, divButton, eraseButton;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,6 +32,8 @@ namespace FirstApp
             mulButton.Click += MulButton_Click;
             divButton = FindViewById<Button>(Resource.Id.divButton);
             divButton.Click += DivButton_Click;
+            eraseButton = FindViewById<Button>(Resource.Id.eraseButton);
+            eraseButton.Click += EraseButton_Click;
 
         }
 
@@ -86,6 +88,13 @@ namespace FirstApp
             answerTextView.Text = answer.ToString();
             }
             UpdateCalculatorText();
+        }
+
+        private void EraseButton_Click(object sender, System.EventArgs e)
+        {
+            answerTextView.Text = null;
+            firstNumberEditText.Text = null;
+            secondNumberEditText.Text = null;
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

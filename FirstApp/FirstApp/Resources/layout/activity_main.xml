@@ -45,6 +45,11 @@
         android:layout_width="113.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/divButton" />
+    <Button
+        android:text="Kustuta"
+        android:layout_width="113.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/eraseButton" />
     <TextView
         android:text="Vastus"
         android:textAppearance="?android:attr/textAppearanceLarge"
